@@ -2,26 +2,34 @@ package com.sougabriel.skillstome.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @Entity
+@Table(name = "skills")
 public class SkillModel {
 
+    private enum SkillType {
+        hardskill,
+        softskill
+    }
+
     @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @Column(unique = true, nullable = false)
     private String name;
 
     private String description;
 
-    @CreatedDate
-    private Date created_at;
+    @Column(nullable = false, length = 9)
+    private SkillType type;
 
-    @LastModifiedDate
-    private Date updated_at;
+    @Column(columnDefinition = "timestamp default current_timestamp")
+    private LocalDateTime created_at = LocalDateTime.now();
+
+    @Column(columnDefinition = "timestamp default current_timestamp")
+    private LocalDateTime updated_at = LocalDateTime.now();
 }
