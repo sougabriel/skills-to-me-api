@@ -1,7 +1,7 @@
-package com.sougabriel.skillstome.model;
+package com.sougabriel.skillstome.skill.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -9,6 +9,10 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "skills")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SkillModel {
 
     private enum SkillType {

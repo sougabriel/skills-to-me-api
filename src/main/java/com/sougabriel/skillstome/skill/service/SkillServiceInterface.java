@@ -1,6 +1,6 @@
-package com.sougabriel.skillstome.service;
+package com.sougabriel.skillstome.skill.service;
 
-import com.sougabriel.skillstome.model.SkillModel;
+import com.sougabriel.skillstome.skill.model.SkillModel;
 
 import java.util.List;
 import java.util.Optional;

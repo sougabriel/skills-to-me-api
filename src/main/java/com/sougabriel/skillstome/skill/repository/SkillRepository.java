@@ -1,6 +1,6 @@
-package com.sougabriel.skillstome.repository;
+package com.sougabriel.skillstome.skill.repository;
 
-import com.sougabriel.skillstome.model.SkillModel;
+import com.sougabriel.skillstome.skill.model.SkillModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

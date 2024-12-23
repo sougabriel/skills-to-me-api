@@ -1,7 +1,7 @@
-package com.sougabriel.skillstome.service;
+package com.sougabriel.skillstome.skill.service;
 
-import com.sougabriel.skillstome.model.SkillModel;
-import com.sougabriel.skillstome.repository.SkillRepository;
+import com.sougabriel.skillstome.skill.model.SkillModel;
+import com.sougabriel.skillstome.skill.repository.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

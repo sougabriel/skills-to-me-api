@@ -1,7 +1,7 @@
-package com.sougabriel.skillstome.controller;
+package com.sougabriel.skillstome.skill.controller;
 
-import com.sougabriel.skillstome.model.SkillModel;
-import com.sougabriel.skillstome.service.SkillServiceInterface;
+import com.sougabriel.skillstome.skill.model.SkillModel;
+import com.sougabriel.skillstome.skill.service.SkillServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
