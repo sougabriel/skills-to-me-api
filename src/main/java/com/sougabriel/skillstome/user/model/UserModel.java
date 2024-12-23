@@ -1,22 +1,19 @@
-package com.sougabriel.skillstome.model;
+package com.sougabriel.skillstome.user.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.UUID;
 
 @Data
 @Entity
 @Table(name = "users", indexes = @Index(columnList = "email"))
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserModel {
-
-    private enum UserRole {
-        user,
-        admin,
-        moderator
-    }
 
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -30,7 +27,7 @@ public class UserModel {
     @Column(nullable = false)
     private String password_hash;
 
-    @Column(nullable = false, length = 2000)
+    @Column(length = 2000)
     private String bio;
 
     private String location;
@@ -47,3 +44,4 @@ public class UserModel {
     @Column(columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime updated_at = LocalDateTime.now();
 }
+

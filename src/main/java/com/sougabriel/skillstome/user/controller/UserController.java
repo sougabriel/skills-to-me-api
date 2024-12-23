@@ -1,7 +1,7 @@
-package com.sougabriel.skillstome.controller;
+package com.sougabriel.skillstome.user.controller;
 
-import com.sougabriel.skillstome.model.UserModel;
-import com.sougabriel.skillstome.service.UserServiceInterface;
+import com.sougabriel.skillstome.user.model.UserModel;
+import com.sougabriel.skillstome.user.service.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +26,11 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<Optional<UserModel>> findById(@PathVariable UUID id) {
         return ResponseEntity.status(HttpStatus.OK).body(this.userServiceInterface.findById(id));
+    }
+
+    @GetMapping("/{email}")
+    public ResponseEntity<Optional<UserModel>> findByEmail(@PathVariable String email) {
+        return ResponseEntity.status(HttpStatus.OK).body(this.userServiceInterface.findByEmail(email));
     }
 
     @PostMapping

@@ -1,7 +1,7 @@
-package com.sougabriel.skillstome.service;
+package com.sougabriel.skillstome.user.service;
 
-import com.sougabriel.skillstome.model.UserModel;
-import com.sougabriel.skillstome.repository.UserRepository;
+import com.sougabriel.skillstome.user.model.UserModel;
+import com.sougabriel.skillstome.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -43,6 +43,11 @@ public class UserService implements UserServiceInterface {
     @Override
     public Optional<UserModel> findById(UUID id) {
         return this.userRepository.findById(id);
+    }
+
+    @Override
+    public Optional<UserModel> findByEmail(String email) {
+        return this.userRepository.findByEmail(email);
     }
 
     @Override

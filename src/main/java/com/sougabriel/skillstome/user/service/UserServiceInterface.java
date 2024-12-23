@@ -1,6 +1,6 @@
-package com.sougabriel.skillstome.service;
+package com.sougabriel.skillstome.user.service;
 
-import com.sougabriel.skillstome.model.UserModel;
+import com.sougabriel.skillstome.user.model.UserModel;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +13,8 @@ public interface UserServiceInterface {
     List<UserModel> findAll();
 
     Optional<UserModel> findById(UUID id);
+
+    Optional<UserModel> findByEmail(String email);
 
     UserModel update(UserModel userModel);
 
