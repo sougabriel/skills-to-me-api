@@ -1,4 +1,4 @@
 package com.sougabriel.skillstome.authentication.dto;
 
-public class UserResponseDTO {
+public record UserResponseDTO (String email, String token) {
 }
